@@ -1,0 +1,9 @@
+{
+    "name": "academia/tictactoe",
+    "description": "TicTacToe game in tdd",
+    "type": "project",
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^8"
+    }
+}

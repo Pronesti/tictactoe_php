@@ -16,4 +16,4 @@ while($game->calcularGanador() == 0){
     dibujarTablero($game->mostrarTablero());
 }
 
-print_r("\n" . $game->calcularGanador() ."\n");
+print_r("\n Ganador Jugador: " . $game->calcularGanador() ."\n");

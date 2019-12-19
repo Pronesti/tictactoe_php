@@ -23,15 +23,24 @@ class TicTacToe{
     function calcularGanador():int {
         $ganador = "";
         $estaLleno = true;
+        
+        if($this->tablero[0][0] != " " && $this->tablero[0][0] == $this->tablero[1][1] && $this->tablero[0][0] == $this->tablero[2][2]){
+            $ganador = $this->tablero[0][0];
+        }
+
+        if($this->tablero[0][2] != " " && $this->tablero[0][2] == $this->tablero[1][1] && $this->tablero[0][2] == $this->tablero[2][0]){
+            $ganador = $this->tablero[2][0];
+        }
 
         for($i=0;$i<3;$i=$i+1){
             if($this->tablero[$i][0] != " " && $this->tablero[$i][0] == $this->tablero[$i][1] && $this->tablero[$i][0] == $this->tablero[$i][2]){
                 $ganador = $this->tablero[$i][0];
             }
-            if($this->tablero[0][$i] != " " && $this->tablero[0][$i] == $this->tablero[1][$i] && $this->tablero[$i][0] == $this->tablero[2][$i]){
+            if($this->tablero[0][$i] != " " && $this->tablero[0][$i] == $this->tablero[1][$i] && $this->tablero[0][$i] == $this->tablero[2][$i]){
                 $ganador = $this->tablero[0][$i];
             }
         }
+
 
         foreach($this->tablero as $i => $iv){
             foreach($iv as $j => $jv){
